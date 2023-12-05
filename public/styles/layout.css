@@ -22,10 +22,27 @@ body {
 }
 
 nav {
-  font-family: 'Bungee', sans-serif;
-  font-size: 24px;
+  background-color: #4056A1;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ .page {
+  margin-top: 150px;
+}
+
+.page-header {
+  width: 30%;
+  float: left;
+  margin: 1em 3.5%;
+  padding: 1em 0 0;
+  height: auto;
+}
+
+main {
+  width: 52%;
+  margin: 0 3%;
+  float: right;
+}

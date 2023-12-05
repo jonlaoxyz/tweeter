@@ -1,0 +1,43 @@
+/*
+* TWEETER navigation css
+*/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #4056A1;
+  color: #ffffff;
+  height: 120px;
+  width: 100vw;
+  padding: 0 1.5em;
+}
+nav span.logo {
+  font-family: 'Bungee', sans-serif;
+  font-size: 1.2em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav #write-tweet {
+  text-align: center;
+}
+
+nav i.fa {
+  color: #ff1900;
+  font-size: 1em;
+  position: relative;
+
+}
+
+nav .strong {
+  font-weight: 600;
+}
+
+nav .light {
+  font-weight: 300;
+}
