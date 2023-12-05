@@ -1,0 +1,35 @@
+/* 
+* Tweeter header.css
+*/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #ffa202;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  padding-top: 120px;
+  height: 300px;
+}
+
+.avatar img {
+  height: 150px;
+  margin: 0;
+  padding: 0;
+}
+
+.user-name {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+h2 .strong {
+  font-weight: 600;
+}
+
+h2 .light {
+  font-weight: 300;
+}
+
