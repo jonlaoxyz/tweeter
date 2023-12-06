@@ -1,3 +1,6 @@
+/*  new-tweets.css */
+/* css to display how tweets look like.*/
+
 .new-tweet {
   margin: 1em 0;
 }
@@ -20,9 +23,9 @@ form div {
 }
 
 form textarea {
+  border: none;
   background-color: transparent;
   border-bottom: 0.2em solid #232321;
-  border: none;
   outline: none;
   resize: none;
   font-size: 1em;
@@ -44,3 +47,63 @@ label {
   font-weight: 600;
 }
 
+/* ++++++++++++++ Main Tweets section */
+
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 0.2em solid #474747;
+  padding: 0.4em;
+  margin: 1.5em 0;
+}
+
+article.tweet header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+article.tweet header i {
+  padding-right: 5px;
+}
+
+article.tweet header div.first-name {
+
+  font-weight: 200;
+}
+
+article.tweet header div.user-id {
+  color: #bababa;
+  font-weight: 600;
+}
+
+article.tweet div.tweet-text {
+  font-weight: 600;
+  padding: 1.2em 0.8em;
+  border-bottom: 0.2em solid #474747 ;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+article.tweet footer .days {
+  font-weight: 300;
+}
+
+article.tweet footer i.fas {
+  padding: 1em;
+}
+
+article.tweet footer i.fas:hover {
+  color: #ffb300;
+  cursor: pointer;
+}
+
+article.tweet:hover {
+  box-shadow: 0.3em 0.3em #a0a0a0;
+}
