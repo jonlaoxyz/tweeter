@@ -36,3 +36,7 @@ main {
   margin: 0 5%;
   width: 90%;
 }
+
+.container {
+  padding: 20px 0;
+}

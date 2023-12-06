@@ -2,10 +2,6 @@
   margin: 1em 0;
 }
 
-.new-tweet h2 {
-  display: none;
-}
-
 .new-tweet label {
   font-weight: 600;
 }
@@ -24,18 +20,27 @@ form div {
 }
 
 form textarea {
-  border: none;
   background-color: transparent;
   border-bottom: 0.2em solid #232321;
+  border: none;
   outline: none;
   resize: none;
   font-size: 1em;
 }
 
 form button {
-  border: none;
-  background-color: #172e78;
   color: #ffffff;
+  background-color: #172e78;
   padding: 0.2em 0.5em;
+  border: none;
   cursor: pointer;
 }
+
+form .red-text {
+  color: red;
+}
+
+label {
+  font-weight: 600;
+}
+
