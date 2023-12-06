@@ -21,6 +21,7 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -62,19 +63,11 @@
           </div>
         </form>
       </section>
-
-      <article class="tweet">
-        <header>
-          <div class="first-name"><i class="fa-solid fa-user-astronaut fa-2xl" style="color: #616161;"></i> Newton</div><div class="user-id">@SirIsaac</div>
-        </header>
-        <div class="tweet-text">
-          If I have seen further it is by standing on the shoulders of giants
-        </div>
-        <footer>
-          <div class="days">10 days ago</div><div><i class="fas fa-flag fa-sm"></i><i class="fas fa-retweet fa-sm"></i><i class="fas fa-heart fa-sm"></i></div>
-        </footer>
-      </article>
-    
+     <!-- container for holding the tweets from the database -->
+      <div id="tweets-container">
+        
+      </div>
+        
   </main>
 </body>
 </html>

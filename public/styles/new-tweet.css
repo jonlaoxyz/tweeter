@@ -64,13 +64,13 @@ article.tweet header {
   padding: 0.5em;
 }
 
-article.tweet header i {
-  padding-right: 5px;
+article.tweet header img {
+  padding-right: 10px;
+  vertical-align: middle;
 }
 
 article.tweet header div.first-name {
-
-  font-weight: 200;
+  font-weight: 300;
 }
 
 article.tweet header div.user-id {
