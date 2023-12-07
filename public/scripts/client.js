@@ -6,6 +6,13 @@
 
 $(document).ready(() => {
 
+  // Escape function to prevent XSS.
+  const escape = (str) => {
+    const div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   const createTweetElement = (tweet) => {
     const { user, content, created_at } = tweet;
     const { name, avatars, handle } = user;
@@ -24,7 +31,7 @@ $(document).ready(() => {
         </div>
       </header>
       <div class="tweet-text">
-        ${text}
+        ${escape(text)}
       </div>
       <footer>
         <div class="days">
