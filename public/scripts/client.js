@@ -56,6 +56,14 @@ $(document).ready(() => {
 
   $form.on("submit", (event) => {
     event.preventDefault();
+    const val = $tweetText.val();
+    const numOfChar = val.length;
+
+    const blankTweet = numOfChar === 0;
+    if (blankTweet) return alert("No blank tweets please.");
+
+    const tooLong = numOfChar > 140;
+    if (tooLong) return alert("You went over the 140 character limit.");
 
     const data = $form.serialize();
     const url = "/tweets";
