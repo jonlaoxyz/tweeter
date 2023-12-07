@@ -61,36 +61,61 @@ $(document).ready(() => {
   const $tweetText = $("#tweet-text");
   const $count = $("#counter")
 
+  const $error = $("#error");
+
+  
   $form.on("submit", (event) => {
     event.preventDefault();
+    displayErrorMsg(null);
+
     const val = $tweetText.val();
     const numOfChar = val.length;
 
+    
     const blankTweet = numOfChar === 0;
-    if (blankTweet) return alert("No blank tweets please.");
+    if (blankTweet) {
+      const errorMsg = "Not Allowed. Empty tweets = Empty thoughts.";
+      return displayErrorMsg(errorMsg);
+    }
 
     const tooLong = numOfChar > 140;
-    if (tooLong) return alert("You went over the 140 character limit.");
-
+    if (tooLong) {
+      const errorMsg = "Too much! Please keep your thoughts in 140 characters.";
+      return displayErrorMsg(errorMsg);
+    }
+    
     const data = $form.serialize();
     const url = "/tweets";
-
+    
     jQuery.post(url, data)
     .done(() => {
       loadTweets();
     });
-
+    
     $tweetText.val("");
     $count.text("140");
     $count.toggleClass("red-text", false);
-
+    
   });
-
+  
   const loadTweets = () => {
     $.ajax("/tweets", { method: 'GET' })
     .then((tweets) => {
       renderTweets(tweets);
     });
+  };
+  
+  const displayErrorMsg = (errorMsg) => {
+    if (!errorMsg) return $error.text("").slideUp();
+    const errorMsg = (`
+      <i class="fas fa-exclamation-circle"></i>
+      ${errorMsg}
+      <i class="fas fa-exclamation-circle"></i>
+    `);
+  
+    $error.html(errorMsg);
+    $error.slideDown("slow");
+    $error.delay(5000).slideUp("slow")
   };
 
   loadTweets();

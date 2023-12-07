@@ -108,3 +108,11 @@ article.tweet footer i.fas:hover {
 article.tweet:hover {
   box-shadow: 0.3em 0.3em #a0a0a0;
 }
+
+/* Error message CSS */
+
+#error {
+  color: red;
+  font-weight: 600;
+  font-size: 1em;
+}

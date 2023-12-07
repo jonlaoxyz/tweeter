@@ -21,7 +21,7 @@
 .user-name {
   color: #fff;
   margin: -40px 0 0 0;
-  text-shadow: 5px 0.2ch 0.2ch #363636;
+  text-shadow: 0 0 5px #363636;
 }
 
 h2 .strong {
