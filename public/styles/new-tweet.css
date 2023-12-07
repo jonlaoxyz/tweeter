@@ -53,6 +53,7 @@ article.tweet {
   display: flex;
   flex-direction: column;
   border: 0.2em solid #474747;
+  border-radius: 0.5em 0;
   padding: 0.4em;
   margin: 1.5em 0;
 }

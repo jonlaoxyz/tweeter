@@ -41,24 +41,17 @@ const createTweetElement = (tweet) => {
       
   //const $tweet = createTweetElement(tweetData);
 
-  const renderTweets = function(tweets) {
-    for (const key in tweets) {
-      const info = tweets[key];
-      const $tweet = createTweetElement(info);
-      $('#tweets-container').append($tweet);
-    }
-  };
-
-//  / Test / driver code (temporary). Eventually will get this from the server.
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
+  
+  //  / Test / driver code (temporary). Eventually will get this from the server.
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
+        "handle": "@SirIsaac"
+      },
+      "content": {
       "text": "If I have seen further it is by standing on the shoulders of giants"
     },
     "created_at": 1461116232227
@@ -71,10 +64,37 @@ const data = [
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": 1632213959088
   }
 ];
 
 $(document).ready(() => {
+
+  const renderTweets = function (tweets) {
+    const $tweetsContainer = $("#tweets-container");
+    for (const tweetData of tweets) {
+      const $tweet = createTweetElement(tweetData);
+      $tweetsContainer.prepend($tweet);
+    }
+  };
+
+  const $form = $("#form");
+  const $tweetText = $("#tweet-text");
+  const $count = $("#counter")
+
+  $("form").on("submit", (event) => {
+    event.preventDefault();
+
+    const data = $form.serialize();
+    const url = "/tweets";
+
+    jQuery.post(url, data);
+    $tweetText.val("");
+
+    $count.text("140");
+    $count.toggleClass("red-text", false);
+
+  });
+
   renderTweets(data);
 });
