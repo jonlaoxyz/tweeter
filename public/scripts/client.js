@@ -60,7 +60,6 @@ $(document).ready(() => {
   const $form = $("#form");
   const $tweetText = $("#tweet-text");
   const $count = $("#counter")
-
   const $error = $("#error");
 
   
@@ -74,7 +73,7 @@ $(document).ready(() => {
     
     const blankTweet = numOfChar === 0;
     if (blankTweet) {
-      const errorMsg = "Not Allowed. Empty tweets = Empty thoughts.";
+      const errorMsg = "Not Allowed. Empty tweets = Empty thoughts?";
       return displayErrorMsg(errorMsg);
     }
 
@@ -98,6 +97,20 @@ $(document).ready(() => {
     
   });
   
+  const displayErrorMsg = (errorMsg) => {
+    if (!errorMsg) return $error.text("").slideUp();
+
+    const errorMsgPop = (`
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      ${errorMsg}
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    `);
+
+    $error.html(errorMsgPop);
+    $error.slideDown("fast");
+    $error.delay(5500).slideUp("slow");
+  };
+
   const loadTweets = () => {
     $.ajax("/tweets", { method: 'GET' })
     .then((tweets) => {
@@ -105,18 +118,7 @@ $(document).ready(() => {
     });
   };
   
-  const displayErrorMsg = (errorMsg) => {
-    if (!errorMsg) return $error.text("").slideUp();
-    const errorMsg = (`
-      <i class="fas fa-exclamation-circle"></i>
-      ${errorMsg}
-      <i class="fas fa-exclamation-circle"></i>
-    `);
-  
-    $error.html(errorMsg);
-    $error.slideDown("slow");
-    $error.delay(5000).slideUp("slow")
-  };
+
 
   loadTweets();
 });

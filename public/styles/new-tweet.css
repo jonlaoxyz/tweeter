@@ -114,5 +114,6 @@ article.tweet:hover {
 #error {
   color: red;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 0.75em;
+  font-style: italic;
 }
