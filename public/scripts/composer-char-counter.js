@@ -13,5 +13,4 @@ $(document).ready(() => {
     $count.toggleClass("red-text", tooMuch);
   });
 
-
 });

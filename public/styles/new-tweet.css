@@ -25,7 +25,7 @@ form div {
 form textarea {
   border: none;
   background-color: transparent;
-  border-bottom: 0.2em solid #232321;
+  border-bottom: 0.2em solid #303030;
   outline: none;
   resize: none;
   font-size: 1em;
@@ -33,10 +33,16 @@ form textarea {
 
 form button {
   color: #ffffff;
-  background-color: #172e78;
+  background-color: #ec5300;
   padding: 0.2em 0.5em;
   border: none;
   cursor: pointer;
+}
+
+form button:hover {
+  color: #ffffff;
+  background-color: #629b00;
+  box-shadow: 0.3em 0.3em #a0a0a0;
 }
 
 form .red-text {
@@ -44,7 +50,8 @@ form .red-text {
 }
 
 label {
-  font-weight: 600;
+  font-weight: 400;
+  color: #515151;
 }
 
 /* ++++++++++++++ Main Tweets section */
@@ -71,7 +78,7 @@ article.tweet header img {
 }
 
 article.tweet header div.first-name {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 article.tweet header div.user-id {

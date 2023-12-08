@@ -73,7 +73,7 @@ $(document).ready(() => {
     
     const blankTweet = numOfChar === 0;
     if (blankTweet) {
-      const errorMsg = "Not Allowed. Empty tweets = Empty thoughts?";
+      const errorMsg = "Not Allowed. Empty tweets = Empty humming?";
       return displayErrorMsg(errorMsg);
     }
 

@@ -2,20 +2,12 @@
 * Tweeter header.css
 */
 
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  background-color: #ffa202;
-  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  padding-top: 120px;
-  height: 300px;
-}
 
 .avatar img {
-  height: 150px;
+  height: 250px;
+  margin: 0 0 10px 0;
   padding: 0;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .user-name {

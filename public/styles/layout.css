@@ -21,10 +21,6 @@ body {
   font-size: 24px;
 }
 
-nav {
-  background: transparent;
-}
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -37,6 +33,102 @@ main {
   width: 90%;
 }
 
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #545149;
+  background-image: url("https://picsum.photos/id/26/2500?blur=5");
+  background-size: cover;
+  background-position: center;
+  padding-top: 100px;
+  height: 400px;
+  z-index: 1;
+}
+
 .container {
   padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: transparent;
+  color: #ffffff;
+  height: 70px;
+  width: 100vw;
+  padding: 0 2em;
+  z-index: 2;
+}
+
+#copyright {
+  width: 100%;
+  background-image: url("https://picsum.photos/id/26/2500?blur=5");
+  background-size: cover;
+  background-position: bottom;
+  background-color: #4a4841;
+  display: flex;
+  flex-direction: column-reverse;
+  align-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  color: #ffffff;
+  padding: 2em 5em;
+}
+
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    width: 30%;
+    margin: 115px 0 0 30px;
+    float: left;
+    position: fixed;
+    border-radius: 0.5em 0;
+  }
+
+  .container {
+    width: 65%;
+    margin: 100px 30px 0 0;
+    float: right;
+    padding-left: 10px;
+  }
+
+  nav {
+    background-color: #545149;
+    height: 100px;
+    background-image: url("https://picsum.photos/id/26/2500?blur=5");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tagline {
+    display: inline;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    color: tomato;
+    float: right;
+  }
+
+  .main {
+    max-width: 1024px;
+    font-size: 16px;
+    margin: 0 auto;
+  }
+
+  nav span.logo {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.75em;
+    text-shadow: 0px 0px 10px #000;
+  }
+
+  #copyright {
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+  }
 }
