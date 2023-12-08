@@ -2,7 +2,7 @@ $(document).ready(() => {
   const $tweetText = $("#tweet-text");
   const $count = $("#counter");
 
-// show characters countdown
+  // show characters countdown
   $tweetText.on("input", () => {
     const val = $tweetText.val();
     const numOfChar = val.length;

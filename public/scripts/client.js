@@ -45,11 +45,11 @@ $(document).ready(() => {
       </footer>
       </article>
       `);
-        return $tweet;
-    };
+    return $tweet;
+  };
       
 
-  const renderTweets = function (tweets) {
+  const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
     for (const tweetData of tweets) {
       const $tweet = createTweetElement(tweetData);
@@ -59,7 +59,7 @@ $(document).ready(() => {
 
   const $form = $("#form");
   const $tweetText = $("#tweet-text");
-  const $count = $("#counter")
+  const $count = $("#counter");
   const $error = $("#error");
 
   
@@ -87,9 +87,9 @@ $(document).ready(() => {
     const url = "/tweets";
     
     jQuery.post(url, data)
-    .done(() => {
-      loadTweets();
-    });
+      .done(() => {
+        loadTweets();
+      });
     
     $tweetText.val("");
     $count.text("140");
@@ -113,9 +113,9 @@ $(document).ready(() => {
 
   const loadTweets = () => {
     $.ajax("/tweets", { method: 'GET' })
-    .then((tweets) => {
-      renderTweets(tweets);
-    });
+      .then((tweets) => {
+        renderTweets(tweets);
+      });
   };
   
 
