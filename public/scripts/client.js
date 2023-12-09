@@ -51,6 +51,7 @@ $(document).ready(() => {
 
   const renderTweets = function(tweets) {
     const $tweetsContainer = $("#tweets-container");
+    $tweetsContainer.empty();
     for (const tweetData of tweets) {
       const $tweet = createTweetElement(tweetData);
       $tweetsContainer.prepend($tweet);
@@ -86,7 +87,7 @@ $(document).ready(() => {
     const data = $form.serialize();
     const url = "/tweets";
     
-    jQuery.post(url, data)
+    $.post(url, data)
       .done(() => {
         loadTweets();
       });
